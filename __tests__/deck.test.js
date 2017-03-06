@@ -1,12 +1,14 @@
 import 'jasmine-expect';
 import { deck, shuffle, } from 'src/deck';
-describe('Card', () => {
-  describe('card', () => {
-    it('returns an object with a suit and rank', () => {
-      // console.log(deck());
-      console.log(shuffle(deck()));
-
-      // expect(card('2','CLUBS')).toBeObject();
+describe('Deck', () => {
+  describe('deck', () => {
+    it('returns an array of 52 cards', () => {
+      expect(deck().length).toEqual(52);
+    });
+  });
+  describe('shuffle', () => {
+    it('randomizes the deck', () => {
+      expect(shuffle(deck()).length).toEqual(52);
     });
   });
 });
