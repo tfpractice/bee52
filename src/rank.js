@@ -15,5 +15,6 @@ export const nextRank = r => getNext(RANKS)(r);
 export const prevRank = r => getPrev(RANKS)(r);
 
 export const rankVal = r => VALUES.get(lower(r));
+
 export const isHigher = a => b => rankVal(b) > rankVal(a);
 export const isLower = a => b => rankVal(b) < rankVal(a);
