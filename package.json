@@ -1,0 +1,9 @@
+{
+  "name": "bee52",
+  "version": "1.0.0",
+  "description": "a module for creating and handling a deck of 52 cards Edit",
+  "main": "index.js",
+  "repository": "git@github.com:tfpractice/bee52.git",
+  "author": "theory friction practice <jackson.brebnor@gmail.com>",
+  "license": "MIT"
+}
