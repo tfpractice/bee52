@@ -13,8 +13,8 @@ export default {
       { dest: 'dist/bundle.cjs.js', format: 'cjs', },
       { dest: 'dist/bundle.umd.js', format: 'umd', },
   ],
-  moduleId: 'subanagram',
-  moduleName: 'subanagram',
+  moduleId: 'bee52',
+  moduleName: 'bee52',
   sourceMap: true,
   exports: 'named',
   plugins: [
