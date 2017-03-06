@@ -18,7 +18,7 @@ export default {
   sourceMap: true,
   exports: 'named',
   plugins: [
-    nodeResolve({ skip: [ 'anagramica', ], }),
+    nodeResolve(),
     commonjs(),
     babel({
       exclude: 'node_modules/**',

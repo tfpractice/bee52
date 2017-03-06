@@ -13,7 +13,7 @@ export default {
     moduleName: 'bee52',
     sourceMap: true,
     plugins: [
-      nodeResolve({ skip: [ 'anagramica', ], }),
+      nodeResolve(),
       commonjs(),
       babel({
         exclude: 'node_modules/**',
