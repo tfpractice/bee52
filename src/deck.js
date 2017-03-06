@@ -14,3 +14,7 @@ export const shuffRed = (shuff, el,id, a) => {
   return shuff;
 };
 export const shuffle = cards => cards.reduce(shuffRed, cards);
+
+export const draw = (amt = 0) => cards => cards.splice(0,amt);
+
+export const add = cards => hand => [ ...hand,...cards, ];

@@ -8,7 +8,6 @@ const KS = card('K', 'SPADES');
 describe('Card', () => {
   describe('card', () => {
     it('returns an object with a suit and rank', () => {
-      console.log(card('2','CLUBS'));
       expect(card('2','CLUBS')).toBeObject();
     });
   });
