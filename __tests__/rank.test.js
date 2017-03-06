@@ -1,6 +1,6 @@
 import 'jasmine-expect';
-import { getNext,getPrev,idxMap,indexVal,modIdx,
-nextRank, pairId,prevRank, RANKS, VALUES, } from 'src/rank';
+import { getNext,getPrev,idxMap,indexVal,isHigher, isLower,lower,
+modIdx, nextRank,pairId, prevRank,RANKS, VALUES, } from 'src/rank';
 
 describe('rank module', () => {
   describe('RANKS', () => {
@@ -43,6 +43,17 @@ describe('rank module', () => {
   describe('prevRank', () => {
     it('returns the next rank ', () => {
       expect(prevRank('k')).toEqual('q');
+    });
+  });
+  describe('isHigher', () => {
+    it('checks if the value of the first is higher than the second', () => {
+      expect(isHigher('3')('a')).toBeTruthy();
+      expect(isHigher('a')('3')).toBeFalse();
+    });
+  }); describe('isLower', () => {
+    it('checks if the value of the first is higher than the second', () => {
+      expect(isLower('3')('a')).toBeTruthy();
+      expect(isLower('a')('3')).toBeFalse();
     });
   });
 });
