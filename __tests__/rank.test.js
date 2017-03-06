@@ -1,6 +1,6 @@
 import 'jasmine-expect';
-import { getNext,getPrev,idxMap,indexVal,isHigher, isLower,lower,
-modIdx, nextRank,pairId, prevRank,RANKS, VALUES, } from 'src/rank';
+import { getNext, getPrev, idxMap, indexVal, isHigher, isLower, lower,
+modIdx, nextRank, pairId, prevRank, RANKS, VALUES, } from 'src/rank';
 
 describe('rank module', () => {
   describe('RANKS', () => {
@@ -16,23 +16,22 @@ describe('rank module', () => {
   });
   describe('pairId', () => {
     it('return an array of KV pairs', () => {
-      console.log(pairId('a',1));
-      expect(pairId('a',1)).toEqual([ 'a',1, ]);
+      expect(pairId('a', 1)).toEqual([ 'a', 1, ]);
     });
   });
   describe('modIdx', () => {
     it('returns the element at the id mod array length', () => {
-      expect(modIdx([ 1,2,3, ])(4)).toEqual(2);
+      expect(modIdx([ 1, 2, 3, ])(4)).toEqual(2);
     });
   }); 
   describe('getNext', () => {
     it('returns the element at the id mod array length', () => {
-      expect(getNext([ 1,2,3, ])(3)).toEqual(1);
+      expect(getNext([ 1, 2, 3, ])(3)).toEqual(1);
     });
   }); 
   describe('getPrev', () => {
     it('returns the element at the id mod array length', () => {
-      expect(getPrev([ 1,2,3, ])(3)).toEqual(2);
+      expect(getPrev([ 1, 2, 3, ])(3)).toEqual(2);
     });
   });
   describe('nextRank', () => {
@@ -47,13 +46,11 @@ describe('rank module', () => {
   });
   describe('isHigher', () => {
     it('checks if the value of the first is higher than the second', () => {
-      expect(isHigher('3')('a')).toBeTruthy();
-      expect(isHigher('a')('3')).toBeFalse();
+      expect(isHigher('3')('a')).toBeTrue();
     });
   }); describe('isLower', () => {
     it('checks if the value of the first is higher than the second', () => {
-      expect(isLower('3')('a')).toBeTruthy();
-      expect(isLower('a')('3')).toBeFalse();
+      expect(isLower('a')('3')).toBeTrue();
     });
   });
 });
