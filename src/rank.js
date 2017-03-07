@@ -7,7 +7,7 @@ export const VALUES = idxMap(RANKS);
 const get = map => k => new Map(map).get(k);
 
 export const idx = arr => r => arr.indexOf(lower(r));
-export const modIdx = arr => id => arr[(id % arr.length)];
+export const modIdx = arr => id => arr[((id + arr.length) % arr.length)];
 export const getNext = arr => r => modIdx(arr)(get(idxMap(arr))(r) + 1);
 export const getPrev = arr => r => modIdx(arr)(get(idxMap(arr))(r) - 1);
 
