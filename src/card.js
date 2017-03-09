@@ -10,5 +10,8 @@ export const setRank = rank => c => card(rank, suit(c));
 export const hasRank = r => c => r === rank(c);
 export const hasSuit = s => c => s === suit(c);
 
+export const xhasRank = r => c => !hasRank(r)(c);
+export const xhasSuit = s => c => !hasSuit(s)(c);
+
 export const sameSuit = c0 => c1 => suit(c0) === suit(c1);
 export const sameRank = c0 => c1 => rank(c0) === rank(c1);
