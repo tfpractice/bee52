@@ -1,9 +1,10 @@
 import 'jasmine-expect';
-import { card,rank,sameRank,sameSuit,setRank,setSuit,suit, } from 'src/card';
+import { card,hasRank,hasSuit,rank,sameRank,sameSuit,setRank, setSuit, suit, } from 'src/card';
 
 const AH = card('a', 'HEARTS');
 const AS = card('a', 'SPADES');
 const KS = card('K', 'SPADES');
+const my2D = card('2','DIAMONDS');
 
 describe('Card', () => {
   describe('card', () => {
@@ -29,6 +30,16 @@ describe('Card', () => {
   describe('setSuit', () => {
     it('sets the suit of a card', () => {
       expect(suit(setSuit('HEARTS')(card('2','CLUBS')))).toEqual('HEARTS');
+    });
+  });
+  describe('hasRank', () => {
+    it('checks if a card has a certain rank', () => {
+      expect(hasRank('2')(my2D)).toBeTruthy();
+    });
+  });
+  describe('hasSuit', () => {
+    it('checks if a card has a certain suit', () => {
+      expect(hasSuit('DIAMONDS')(my2D)).toBeTruthy();
     });
   });
   describe('sameRank', () => {
