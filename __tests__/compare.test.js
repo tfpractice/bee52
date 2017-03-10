@@ -27,4 +27,20 @@ describe('compares', () => {
       expect(diffSuit(AS)(KS)).toBeFalse();
     });
   });
+  describe('isMatch', () => {
+    it('checks for equality of suit and ranks', () => {
+      expect(isMatch(card('a', 'HEARTS'))(AH)).toBeTruthy();
+    });
+  }); 
+  describe('xMatch', () => {
+    it('checks for nonequality of suit and ranks', () => {
+      expect(xMatch(card('a', 'HEARTS'))(AH)).toBeFalse();
+    });
+  });
+  describe('rankDiff', () => {
+    it('returns the differnece in rankVal of tow cards', () => {
+      console.log(rankDiff(AS)(KS));
+      console.log(rankDiff(KS)(AS));
+    });
+  });
 });
