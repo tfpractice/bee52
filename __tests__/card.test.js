@@ -1,5 +1,5 @@
 import 'jasmine-expect';
-import { card,hasRank,hasSuit,rank,sameRank,sameSuit,
+import { card,copy,hasRank,hasSuit,id,rank, sameRank, sameSuit,
 setRank,setSuit,suit, xhasRank, xhasSuit, } from 'src/card';
 
 const AH = card('a', 'HEARTS');
@@ -31,6 +31,16 @@ describe('Card', () => {
   describe('setSuit', () => {
     it('sets the suit of a card', () => {
       expect(suit(setSuit('HEARTS')(card('2','CLUBS')))).toEqual('HEARTS');
+    });
+  });
+  describe('id', () => {
+    it('rerutes a string of the rank and suit', () => {
+      expect(id(my2D)).toEqual('2_DIAMONDS');
+    });
+  });
+  describe('copy', () => {
+    it('returns a copy of the card', () => {
+      expect(id(copy(my2D))).toEqual(id(my2D));
     });
   });
   describe('hasRank', () => {
