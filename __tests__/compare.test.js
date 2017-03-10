@@ -40,16 +40,17 @@ describe('compares', () => {
   describe('rankDiff', () => {
     it('returns the differnece in rankVal of tow cards', () => {
       expect(rankDiff(AS)(KS)).toEqual(1);
-
-      // console.log(rankDiff(AS)(KS));
-      expect(rankDiff(KS)(AS)).toEqual(1);
-
-      // console.log(rankDiff(KS)(AS));
+      expect(rankDiff(KS)(AS)).toEqual(-1);
     });
   });
   describe('sameID', () => {
     it('checks for equality on card id', () => {
       expect(sameID(AH)(AH)).toBeTruthy();
+    });
+  });
+  describe('diffID', () => {
+    it('checks for equality on card id', () => {
+      expect(diffID(AH)(AH)).toBeFalse();
     });
   });
 });
