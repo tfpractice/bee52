@@ -1,7 +1,8 @@
-import { rank, suit, } from './card';
+import { hasRank, hasSuit,rank, suit, } from './card';
 import { rankVal, } from './rank';
-export const sameSuit = c0 => c1 => suit(c0) === suit(c1);
-export const sameRank = c0 => c1 => rank(c0) === rank(c1);
+
+export const sameSuit = c0 => c1 => hasSuit(suit(c0))(c1);
+export const sameRank = c0 => c1 => hasRank(rank(c0))(c1);
 
 export const diffSuit = c0 => c1 => !sameSuit(c0)(c1);
 export const diffRank = c0 => c1 => !sameRank(c0)(c1);
