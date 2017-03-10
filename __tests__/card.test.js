@@ -1,5 +1,5 @@
 import 'jasmine-expect';
-import { card,copy,hasRank,hasSuit,id,rank,rankDiff,rankDist, setRank,setSuit,suit, xhasRank, xhasSuit, } from 'src/card';
+import { card,copy,hasRank,hasSuit,id,nextRank,prevRank,rank,rankDiff,rankDist, setRank,setSuit,suit, xhasRank, xhasSuit, } from 'src/card';
 
 const AH = card('a', 'HEARTS');
 const AS = card('a', 'SPADES');
@@ -70,6 +70,16 @@ describe('Card', () => {
   describe('rankDiff', () => {
     it('checks for the differnece between a rank and a cards rank', () => {
       expect(rankDiff('a')(my2D)).toEqual(12);
+    });
+  });
+  describe('nextRank', () => {
+    it('returns the next rank f the given card', () => {
+      expect(nextRank(my2D)).toEqual('3');
+    });
+  });
+  describe('prevRank', () => {
+    it('returns the previoys rank of the given card', () => {
+      expect(prevRank(my2D)).toEqual('a');
     });
   });
 });

@@ -12,8 +12,8 @@ export const modIdx = arr => id => arr[((id + arr.length) % arr.length)];
 export const getNext = arr => r => modIdx(arr)(get(idxMap(arr))(r) + 1);
 export const getPrev = arr => r => modIdx(arr)(get(idxMap(arr))(r) - 1);
 
-export const nextRank = r => getNext(RANKS)(r);
-export const prevRank = r => getPrev(RANKS)(r);
+export const next = r => getNext(RANKS)(r);
+export const prev = r => getPrev(RANKS)(r);
 
 export const rankVal = r => VALUES.get(lower(r));
 export const diff = a => b => (norm(rankVal(a) - rankVal(b)));
