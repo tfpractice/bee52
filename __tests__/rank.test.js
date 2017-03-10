@@ -1,6 +1,6 @@
 import 'jasmine-expect';
-import { getNext, getPrev, idxMap, indexVal, isHigher, isLower, lower,
-modIdx, nextRank, pairId, prevRank, RANKS, VALUES, } from 'src/rank';
+import { diff, dist, getNext, getPrev, idxMap, indexVal, isHigher, isLower,
+lower, maxDist, modIdx, nextRank, pairId, prevRank, RANKS, VALUES, } from 'src/rank';
 
 describe('rank module', () => {
   describe('RANKS', () => {
@@ -51,6 +51,24 @@ describe('rank module', () => {
   }); describe('isLower', () => {
     it('checks if the value of the first is higher than the second', () => {
       expect(isLower('a')('3')).toBeTrue();
+    });
+  });
+  describe('diff', () => {
+    it('returns the absolute differnece of rankValues', () => {
+      expect(diff('a')('2')).toEqual(12);
+      expect(diff('2')('a')).toEqual(1);
+      expect(diff('k')('2')).toEqual(11);
+      expect(diff('2')('k')).toEqual(2);
+    });
+  });
+  describe('dist', () => {
+    it('returns the minimunm distance between ranks', () => {
+      expect(dist('k')('2')).toEqual(2);
+    });
+  });
+  describe('maxDist', () => {
+    it('returns the minimunm distance between ranks', () => {
+      expect(maxDist('k')('2')).toEqual(11);
     });
   });
 });

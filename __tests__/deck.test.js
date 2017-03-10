@@ -18,7 +18,6 @@ describe('Deck', () => {
   });
   describe('add', () => {
     it('appends cards to an array', () => {
-      console.log(add(deck().splice(0,4))([]));
       expect(add(deck().splice(0,4))([])).toBeArray();
     });
   });

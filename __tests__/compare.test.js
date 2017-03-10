@@ -39,7 +39,9 @@ describe('compares', () => {
   });
   describe('rankDiff', () => {
     it('returns the differnece in rankVal of tow cards', () => {
+      expect(rankDiff(AS)(KS)).toEqual(1);
       console.log(rankDiff(AS)(KS));
+      expect(rankDiff(KS)(AS)).toEqual(1);
       console.log(rankDiff(KS)(AS));
     });
   });
