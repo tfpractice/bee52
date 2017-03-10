@@ -1,3 +1,4 @@
+import { dist, rankVal, } from './rank';
 export const card = (rank, suit) => ({ rank, suit, id: `${rank}_${suit}`, });
 
 export const id = ({ rank, suit, }) => `${rank}_${suit}`;
@@ -16,3 +17,6 @@ export const xhasSuit = s => c => !hasSuit(s)(c);
 
 export const sameSuit = c0 => c1 => suit(c0) === suit(c1);
 export const sameRank = c0 => c1 => rank(c0) === rank(c1);
+
+export const rankDist = r => c => dist(r)(rank(c));
+export const rankDiff = r => c => rankVal(r) - rankVal(rank(c));

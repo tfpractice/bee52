@@ -1,5 +1,5 @@
 import 'jasmine-expect';
-import { card,copy,hasRank,hasSuit,id,rank, setRank,setSuit,suit, xhasRank, xhasSuit, } from 'src/card';
+import { card,copy,hasRank,hasSuit,id,rank,rankDiff,rankDist, setRank,setSuit,suit, xhasRank, xhasSuit, } from 'src/card';
 
 const AH = card('a', 'HEARTS');
 const AS = card('a', 'SPADES');
@@ -60,6 +60,16 @@ describe('Card', () => {
   describe('xhasSuit', () => {
     it('checks if a card has a certain suit', () => {
       expect(xhasSuit('DIAMONDS')(my2D)).toBeFalse();
+    });
+  });
+  describe('rankDist', () => {
+    it('checks for the distance between a rank and a cards rank', () => {
+      expect(rankDist('a')(my2D)).toEqual(1);
+    });
+  });
+  describe('rankDiff', () => {
+    it('checks for the differnece between a rank and a cards rank', () => {
+      expect(rankDiff('a')(my2D)).toEqual(12);
     });
   });
 });
