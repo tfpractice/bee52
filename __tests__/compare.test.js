@@ -1,6 +1,6 @@
 import 'jasmine-expect';
 import { card, } from 'src/card';
-import { diffRank, diffSuit,isMatch,rankDiff,rankOrder,rankSort,sameRank,sameSuit,xMatch, } from 'src/compare';
+import { diffID, diffRank,diffSuit, isMatch, rankDiff,rankOrder,rankSort,sameID,sameRank,sameSuit,xMatch, } from 'src/compare';
 const AH = card('a', 'HEARTS');
 const AS = card('a', 'SPADES');
 const KS = card('K', 'SPADES');
@@ -40,9 +40,16 @@ describe('compares', () => {
   describe('rankDiff', () => {
     it('returns the differnece in rankVal of tow cards', () => {
       expect(rankDiff(AS)(KS)).toEqual(1);
-      console.log(rankDiff(AS)(KS));
+
+      // console.log(rankDiff(AS)(KS));
       expect(rankDiff(KS)(AS)).toEqual(1);
-      console.log(rankDiff(KS)(AS));
+
+      // console.log(rankDiff(KS)(AS));
+    });
+  });
+  describe('sameID', () => {
+    it('checks for equality on card id', () => {
+      expect(sameID(AH)(AH)).toBeTruthy();
     });
   });
 });
