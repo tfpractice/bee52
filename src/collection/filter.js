@@ -1,6 +1,8 @@
+import { filter, } from 'fenugreek-collections';
+import { isMatch,xMatch, } from '../compare';
 import { hasRank, hasSuit, } from '../card';
-import { isMatch, } from '../compare';
 
-export const byRank = rank => cards => cards.filter(hasRank(rank));
-export const bySuit = suit => cards => cards.filter(hasSuit(suit));
-export const byMatch = c => cards => cards.filter(isMatch(c));
+export const byRank = rank => cards => filter(cards)(hasRank(rank));
+export const bySuit = suit => cards => filter(cards)(hasSuit(suit));
+export const byMatch = c => cards => filter(cards)(isMatch(c));
+export const exclude = c => cards => filter(cards)(xMatch(c));
