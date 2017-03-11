@@ -1,6 +1,7 @@
 import 'jasmine-expect';
 import { card, } from 'src/card';
-import { diffID, diffRank,diffSuit, isMatch, rankOrder,rankSort,rDiff,rDist,sameID,sameRank,sameSuit,xMatch, } from 'src/compare';
+import { diffID, diffRank,diffSuit, isMatch, rankOrder,rankSort,rDiff,rDist,
+  sameID,sameRank,sameSuit,xMatch, } from 'src/compare';
 const AH = card('a', 'HEARTS');
 const AS = card('a', 'SPADES');
 const KS = card('K', 'SPADES');
@@ -37,7 +38,7 @@ describe('compares', () => {
       expect(xMatch(card('a', 'HEARTS'))(AH)).toBeFalse();
     });
   });
-  describe('rankDiff', () => {
+  describe('rDiff', () => {
     it('returns the differnece in rankVal of tow cards', () => {
       expect(rDiff(AS)(KS)).toEqual(1);
       expect(rDiff(KS)(AS)).toEqual(-1);
@@ -45,7 +46,7 @@ describe('compares', () => {
   });
   describe('rDist', () => {
     it('checks for the dist bewteen card ranks', () => {
-      expect(rDiff(AS)(card('4', 'HEARTS'))).toEqual(10);
+      expect(rDist(AS)(card('4', 'HEARTS'))).toEqual(3);
     });
   });
   describe('sameID', () => {

@@ -1,5 +1,5 @@
 import 'jasmine-expect';
-import { byRank, bySuit, } from 'src/filter';
+import { byRank, bySuit, } from 'src/collection/filter';
 import { deck, } from 'src/deck';
 const myDeck = deck();
 
