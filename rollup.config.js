@@ -17,10 +17,9 @@ export default {
   moduleName: 'bee52',
   sourceMap: true,
   exports: 'named',
-  external: [ 'graph-curry','fenugreek-collections', ],
+  external: [ 'fenugreek-collections', ],
   globals: { 'fenugreek-collections': 'fenugreek-collections', },
   plugins: [
-    // nodeResolve(),
     nodeResolve({ skip: [ 'fenugreek-collections', ], }),
     commonjs(),
     babel({

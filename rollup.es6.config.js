@@ -12,7 +12,7 @@ export default {
     moduleId: 'bee52',
     moduleName: 'bee52',
     sourceMap: true,
-    external: [ 'bee52','graph-curry','fenugreek-collections', ],
+    external: [ 'fenugreek-collections', ],
     plugins: [
       nodeResolve({ skip: [ 'fenugreek-collections', ], }),
       commonjs(),
