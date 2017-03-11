@@ -1,7 +1,7 @@
 import 'jasmine-expect';
-import { contains, find,idx,remove,transfer, xContains, } from 'src/cards/mutate';
+import { contains, find,idx,remove,transfer, xContains, } from 'src/collection/find';
 import { deck, } from 'src/deck';
-import { card, } from 'src/cards/card';
+import { card, } from 'src/card';
 const myDeck = (deck());
 const twoD = card('2', 'DIAMONDS');
 const myCards = [];
@@ -24,7 +24,7 @@ describe('find', () => {
   });
   describe('xContains', () => {
     it('checks the array for a matching card', () => {
-      expect(contains(myDeck)(twoD)).toBeFalse();
+      expect(xContains(myDeck)(twoD)).toBeFalse();
     });
   });
 });
