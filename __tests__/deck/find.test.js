@@ -1,5 +1,5 @@
 import 'jasmine-expect';
-import { contains, find,idx,remove,transfer, xContains, } from 'src/collection/find';
+import { contains, find,idx,remove,transfer, xContains, } from 'src/deck/find';
 import { deck, } from 'src/deck';
 import { card, } from 'src/card';
 const myDeck = (deck());

@@ -1,7 +1,7 @@
 import 'jasmine-expect';
 import { deck, } from 'src/deck';
-import { draw, drawTo, } from 'src/collection/draw';
-import { diff,diffBin,inter,interBin,union,unionBin, } from 'src/collection/dedupe';
+import { draw, drawTo, } from 'src/deck/draw';
+import { diff,diffBin,inter,interBin,union,unionBin, } from 'src/deck/dedupe';
 const myDeck = deck();
 const q1 = draw(13)(myDeck);
 const q2 = myDeck.slice(13, 26);

@@ -1,5 +1,5 @@
 import 'jasmine-expect';
-import { shuffle, shuffReduce, } from 'src/collection/shuffle';
+import { shuffle, shuffReduce, } from 'src/deck/shuffle';
 import { deck, } from 'src/deck';
 
 describe('Shuffle', () => {

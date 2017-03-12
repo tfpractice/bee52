@@ -1,6 +1,6 @@
 import 'jasmine-expect';
 import { deck, } from 'src/deck';
-import { byRank, bySuit, exclude, } from 'src/collection/filter';
+import { byRank, bySuit, exclude, } from 'src/deck/filter';
 const myDeck = deck();
 
 describe('filter', () => {
