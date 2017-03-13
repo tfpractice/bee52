@@ -1,7 +1,7 @@
 import 'jasmine-expect';
 import { card, } from 'src/card';
-import { diffID, diffRank, diffSuit,isMatch,rDiff,rDist,sameID,sameRank,sameSuit
-  ,sDiff, xMatch, } from 'src/compare';
+import { diffID, diffRank, diffSuit,isMatch,ranksHigher,ranksLower,rDiff,rDist,sameID
+  ,sameRank, sameSuit, sDiff, xMatch, } from 'src/compare';
   
 const AH = card('a', 'HEARTS');
 const AS = card('a', 'SPADES');
@@ -64,6 +64,16 @@ describe('compares', () => {
     it('returns the difference in suit', () => {
       expect(sDiff(KS)(AS)).toEqual(0);
       expect(sDiff(AH)(AS)).toEqual(-1);
+    });
+  });
+  describe('ranksHigher', () => {
+    it('checks if the second card ranks higher than the first', () => {
+      expect(ranksHigher(KS)(AS)).toBeTrue();
+    });
+  });
+  describe('ranksLower', () => {
+    it('checks if the second card ranks higher than the first', () => {
+      expect(ranksLower(AS)(KS)).toBeTrue();
     });
   });
 });

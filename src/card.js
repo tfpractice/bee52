@@ -1,4 +1,5 @@
 import { dist, isHigher,isLower, next, prev, rankVal, } from './rank';
+
 export const card = (rank, suit) => ({ rank, suit, id: `${rank}_${suit}`, });
 
 export const id = ({ rank, suit, }) => `${rank}_${suit}`;
