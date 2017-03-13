@@ -15,7 +15,7 @@ export const xMatch = c0 => c1 => !isMatch(c0)(c1);
 export const rDist = c0 => c1 => rankDist(rank(c0))(c1);
 export const rDiff = c0 => c1 => rankDiff(rank(c0))(c1);
 
-export const sDiff = a => b => sameSuit(a)(b) ? 0 : ((suit(a) < suit(b)) ? -1 : 1);
+export const sDiff = a => b => sameSuit(a)(b) ? 0 : (suit(a) < suit(b) ? -1 : 1);
 
 export const ranksHigher = c0 => c1 => higherRank(rank(c0))(c1);
 export const ranksLower = c0 => c1 => lowerRank(rank(c0))(c1);
