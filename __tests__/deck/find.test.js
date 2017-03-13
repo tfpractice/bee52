@@ -1,10 +1,10 @@
 import 'jasmine-expect';
-import { contains, find,idx,remove,transfer, xContains, } from 'src/deck/find';
+import { contains, find,idx, xContains, } from 'src/deck/find';
 import { deck, } from 'src/deck';
 import { card, } from 'src/card';
+
 const myDeck = (deck());
 const twoD = card('2', 'DIAMONDS');
-const myCards = [];
 
 describe('find', () => {
   describe('idx', () => {

@@ -2,11 +2,10 @@ import 'jasmine-expect';
 import { deck, } from 'src/deck';
 import { draw, } from 'src/deck/draw';
 import { diff,diffBin,inter,interBin,union,unionBin, } from 'src/deck/dedupe';
+
 const myDeck = deck();
 const q1 = draw(13)(myDeck);
 const q2 = myDeck.slice(13, 26);
-const q3 = myDeck.slice(26, 39);
-const q4 = myDeck.slice(39);
 
 describe('dedupe', () => {
   describe('diff', () => {

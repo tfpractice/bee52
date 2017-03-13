@@ -1,7 +1,7 @@
 import { spread, } from 'fenugreek-collections';
+import { xMatch, } from '../compare';
 import { find, idx, } from './find';
 import { diff, union, } from './dedupe';
-import { xMatch, } from '../compare';
 
 export const draw = amt => arr => spread(arr).splice(0, amt);
 export const drawTo = c => arr => find(arr)(c) ? draw(idx(arr)(c) + 1)(arr) : [];

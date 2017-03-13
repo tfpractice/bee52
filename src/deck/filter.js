@@ -1,5 +1,5 @@
 import { filter, } from 'fenugreek-collections';
-import { isMatch,xMatch, } from '../compare';
+import { isMatch, xMatch, } from '../compare';
 import { hasRank, hasSuit, } from '../card';
 
 export const byRank = rank => cards => filter(cards)(hasRank(rank));
