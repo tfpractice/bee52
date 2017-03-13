@@ -1,6 +1,6 @@
 {
   "name": "bee52",
-  "version": "1.0.3-2",
+  "version": "1.0.3-3",
   "description": "a module for creating and handling a deck of 52 cards Edit",
   "main": "dist/bundle.cjs.js",
   "browser": "dist/bundle.umd.js",
