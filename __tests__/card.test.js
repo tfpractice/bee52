@@ -1,10 +1,8 @@
 import 'jasmine-expect';
-import { adjRanks,card,copy,hasAdjRank,hasRank,hasSuit,higherRank, id,lowerRank,nextRank,
-  prevRank, rank,rankDiff,rankDist, setRank, setSuit, suit,xhasRank, xhasSuit, } from 'src/card';
+import { adjRanks,card,copy,hasAdjRank,hasRank,hasSuit,higherRank, id,lowerRank,
+  nextRank,prevRank, rank,rankDiff,rankDist, setRank, setSuit, suit,xhasRank, 
+  xhasSuit, } from 'src/card';
 
-const AH = card('a', 'HEARTS');
-const AS = card('a', 'SPADES');
-const KS = card('K', 'SPADES');
 const my2D = card('2','DIAMONDS');
 
 describe('Card', () => {

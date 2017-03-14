@@ -25,7 +25,6 @@ export const rankDiff = r => c => rankVal(r) - rankVal(rank(c));
 
 export const nextRank = c => next(rank(c));
 export const prevRank = c => prev(rank(c));
+
 export const adjRanks = c => [ prevRank(c), nextRank(c), ];
 export const hasAdjRank = r => c => adjRanks(c).some(adj => adj === r);
-
-// export const hasAdjRan

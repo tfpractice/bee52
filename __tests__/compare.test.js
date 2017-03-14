@@ -1,7 +1,7 @@
 import 'jasmine-expect';
 import { card, } from 'src/card';
-import { diffID, diffRank, diffSuit,isMatch,ranksHigher,ranksLower,rDiff,rDist,sameID
-  ,sameRank, sameSuit, sDiff, xMatch, } from 'src/compare';
+import { diffID, diffRank, diffSuit,isMatch,ranksHigher,ranksLower,rDiff,rDist,
+  sameID,sameRank, sameSuit, sDiff, xMatch, } from 'src/compare';
   
 const AH = card('a', 'HEARTS');
 const AS = card('a', 'SPADES');
