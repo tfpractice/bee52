@@ -1,7 +1,6 @@
 import 'jasmine-expect';
-import { adjRanks,card,copy,hasRank,hasSuit,higherRank,id, lowerRank,nextRank,prevRank,
-  rank, rankDiff,rankDist,setRank, setSuit, suit, xhasRank,
-  xhasSuit, } from 'src/card';
+import { adjRanks,card,copy,hasAdjRank,hasRank,hasSuit,higherRank, id,lowerRank,nextRank,
+  prevRank, rank,rankDiff,rankDist, setRank, setSuit, suit,xhasRank, xhasSuit, } from 'src/card';
 
 const AH = card('a', 'HEARTS');
 const AS = card('a', 'SPADES');
@@ -98,6 +97,12 @@ describe('Card', () => {
   describe('lowerRank', () => {
     it('checks if a card has a lower rank than the given rank', () => {
       expect(lowerRank('3')(my2D)).toEqual(true);
+    });
+  });
+  
+  describe('hasAdjRank', () => {
+    it('checks for equality between a given rank and  a cards adjRanks', () => {
+      expect(hasAdjRank('a')(my2D)).toBeTruthy();
     });
   });
 });
