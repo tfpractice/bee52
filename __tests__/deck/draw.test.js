@@ -40,4 +40,9 @@ describe('draw', () => {
       expect(rest(myDeck).length).toEqual(51);
     });
   });
+  describe('cut', () => {
+    it('splits and reverses the deck', () => {
+      expect(cut(myDeck)[0]).not.toEqual(myDeck[0]);
+    });
+  });
 });
