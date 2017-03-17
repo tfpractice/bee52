@@ -1,6 +1,6 @@
 import 'jasmine-expect';
 import { deck, } from 'src/deck';
-import { addCards, draw, drawTo, removeCards, } from 'src/deck/draw';
+import { add, draw, drawTo, removeCards, } from 'src/deck/draw';
 
 const myDeck = deck();
 
@@ -15,9 +15,9 @@ describe('draw', () => {
       expect(drawTo(myDeck[8])(myDeck).length).toEqual(9);
     });
   });
-  describe('addCards', () => {
+  describe('add', () => {
     it('draws all cards until a match is found', () => {
-      expect(addCards(...myDeck.slice(0,9))(myDeck.slice(9)).length).toEqual(52);
+      expect(add(...myDeck.slice(0,9))(myDeck.slice(9)).length).toEqual(52);
     });
   });
   describe('removeCards', () => {
