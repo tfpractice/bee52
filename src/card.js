@@ -1,10 +1,10 @@
 import { dist, isHigher,isLower, next, prev, rankVal, } from './rank';
 
-export const card = (rank, suit) => ({ rank, suit, id: `${rank}_${suit}`, });
+export const card = (rank = '', suit = '') => ({ rank, suit, id: `${rank}_${suit}`, });
 
-export const id = ({ rank, suit, }) => `${rank}_${suit}`;
-export const suit = ({ suit, }) => suit;
-export const rank = ({ rank, }) => rank;
+export const id = ({ rank, suit, } = card()) => `${rank}_${suit}`;
+export const suit = ({ suit, } = card()) => suit;
+export const rank = ({ rank, } = card()) => rank;
 
 export const copy = c => card(rank(c), suit(c));
 

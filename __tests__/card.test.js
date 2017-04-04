@@ -8,17 +8,26 @@ const my2D = card('2','DIAMONDS');
 describe('Card', () => {
   describe('card', () => {
     it('returns an object with a suit and rank', () => {
+      console.log(card());
       expect(card('2','CLUBS')).toBeObject();
     });
   });
   describe('suit', () => {
     it('returns the suit of the card', () => {
+      expect(suit()).toEqual('');  
       expect(suit({ suit: 'DIAMONDS', })).toEqual('DIAMONDS');  
     });
   });
   describe('rank', () => {
     it('returns the rank property', () => {
+      expect(rank()).toEqual('');  
       expect(rank({ rank: '2', })).toEqual('2');
+    });
+  });
+  describe('id', () => {
+    it('rerutes a string of the rank and suit', () => {
+      expect(id()).toEqual('_');  
+      expect(id(my2D)).toEqual('2_DIAMONDS');
     });
   });
   describe('setRank', () => {
@@ -31,11 +40,7 @@ describe('Card', () => {
       expect(suit(setSuit('HEARTS')(card('2','CLUBS')))).toEqual('HEARTS');
     });
   });
-  describe('id', () => {
-    it('rerutes a string of the rank and suit', () => {
-      expect(id(my2D)).toEqual('2_DIAMONDS');
-    });
-  });
+
   describe('copy', () => {
     it('returns a copy of the card', () => {
       expect(id(copy(my2D))).toEqual(id(my2D));
