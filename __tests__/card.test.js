@@ -40,7 +40,6 @@ describe('Card', () => {
       expect(suit(setSuit('HEARTS')(card('2','CLUBS')))).toEqual('HEARTS');
     });
   });
-
   describe('copy', () => {
     it('returns a copy of the card', () => {
       expect(id(copy(my2D))).toEqual(id(my2D));

@@ -1,3 +1,5 @@
+import { deck, } from './deck';
+
 export const shuffReduce = (shuff, el,id, deck = shuff) => {
   const j = Math.floor(Math.random() * id);
 
@@ -5,4 +7,4 @@ export const shuffReduce = (shuff, el,id, deck = shuff) => {
   return shuff;
 };
 
-export const shuffle = cards => cards.reduce(shuffReduce, cards);
+export const shuffle = (cards = deck()) => cards.reduce(shuffReduce, cards);
